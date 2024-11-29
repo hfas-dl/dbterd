@@ -27,7 +27,7 @@ class DbtInvocation:
             dbt_project_dir or os.environ.get("DBT_PROJECT_DIR") or str(Path.cwd())
         )
         self.target = dbt_target
-        self.args = ["--quiet", "--log-level", "none"]
+        self.args = ["--quiet", "--log-level", "info"]
 
     def __invoke(self, runner_args: List[str] = []):
         """Base function of the dbt invocation
